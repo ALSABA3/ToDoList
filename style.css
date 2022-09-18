@@ -1,10 +1,11 @@
 :root {
-  --background-color: #ede0d4;
-  --text-color: #9c6644;
-  --input-background: #7f5539;
-  --add-task: #ddb892;
-  --delete-btn: #b08968;
-  --edit: #e6ccb2;
+  --dark: #374151;
+  --darker: #1f2937;
+  --darkest: #111827;
+  --grey: #6b7280;
+  --pink: #ec4899;
+  --purple: #8b5cf6;
+  --light: #eee;
 }
 
 * {
@@ -18,7 +19,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   color: #fff;
-  background-color: var(--background-color);
+  background-color: var(--dark);
 }
 
 header {
@@ -31,7 +32,7 @@ header {
 header h1 {
   font-size: 2.5rem;
   font-weight: 300;
-  color: var(--text-color);
+  color: var(--grey);
   margin-bottom: 1rem;
 }
 
@@ -49,22 +50,23 @@ button {
 
 #new-task-input {
   flex: 1 1 0%;
-  background-color: var(--input-background);
+  background-color: var(--darker);
   padding: 1rem;
   border-radius: 1rem;
   margin-right: 1rem;
+  color: var(--light);
   font-size: 1.25rem;
-  color: var(--background-color);
 }
 
 #new-task-input::placeholder {
-  color: var(--background-color);
+  color: var(--grey);
 }
 
 #new-task-submit {
+  color: var(--pink);
   font-size: 1.25rem;
   font-weight: 700;
-  background-color: var(--add-task);
+  background-image: linear-gradient(to right, var(--pink), var(--purple));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -94,14 +96,14 @@ main {
 .task-list h2 {
   font-size: 1.5rem;
   font-weight: 300;
-  color: var(--text-color);
+  color: var(--grey);
   margin-bottom: 1rem;
 }
 
 #tasks .task {
   display: flex;
   justify-content: space-between;
-  background-color: var(--input-background);
+  background-color: var(--darkest);
   padding: 1rem;
   border-radius: 1rem;
   margin-bottom: 1rem;
@@ -112,7 +114,7 @@ main {
 }
 
 .task .content .text {
-  color: var(--background-color);
+  color: var(--light);
   font-size: 1.125rem;
   width: 100%;
   display: block;
@@ -120,7 +122,7 @@ main {
 }
 
 .task .content .text:not(:read-only) {
-  color: black;
+  color: var(--pink);
 }
 
 .task .actions {
@@ -131,7 +133,7 @@ main {
 .task .actions button {
   cursor: pointer;
   margin: 0 0.5rem;
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   font-weight: 700;
   text-transform: uppercase;
   transition: 0.4s;
@@ -145,25 +147,13 @@ main {
   opacity: 0.6;
 }
 
-/* .task .actions .edit {
-  background-color: var(--edit);
+.task .actions .edit {
+  background-image: linear-gradient(to right, var(--pink), var(--purple));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-} */
+}
 
 .task .actions .delete {
-  color: var(--delete-btn);
-}
-.uil-trash-alt {
-  font-size: 1.5rem;
-  color: var(--background-color);
-}
-.uil-check {
-  font-size: 1.5rem;
-  color: var(--background-color);
-}
-.uil-edit-alt {
-  font-size: 1.5rem;
-  color: var(--background-color);
+  color: crimson;
 }
